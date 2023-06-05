@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <title>LOGIN</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="#">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="mail" id="mail" required>
+                       <label>Gmail</label> 
+                        
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="pass" name="pass" id="pass" required>
+                        <label>Contraseña</label>
+                        
+                    </div>
+                    
+                    <button type="submit" onclick="enviar()">Login</button>
+                    <button type="submit" onclick="goRegister()" >Registrarse</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

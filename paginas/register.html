@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/register.css">
+  <title>Registro</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="#">
+                    <h2>Registro</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input name="user" id="user" required>
+                       <label>Usuario</label> 
+                    </div>
+
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="mail" id="mail" required>
+                       <label>Gmail</label> 
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="pass" id="pass" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <div class="selects">
+                        <label>Selecciona tu pais</label>
+                    </div>
+                    <div><select name="codeCountry" id="codeCountry">
+                    </select></div>
+                    <div id="tab" class="cont"></div>
+                    <button type="submit" onclick="register()" >Registrarse</button>
+                    <button type="submit" onclick="goLogin()" >Login</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/register.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LISTA AMIGOS</title>
+	<link rel="stylesheet" href="css/listfriends.css">
+</head>
+<body>
+    <section>
+        <div>
+            <div class=""><button type="submit" onclick="goOptions()" class="button">
+                <span class="button__text">Opciones</span>
+                <span class="button__icon">
+                    <ion-icon name="options-outline"></ion-icon>
+                    </span>
+            </div>
+            <div><button type="submit" onclick="listFriends()" class="button">
+                <span class="button__text">Lista de amigos</span>
+                <span class="button__icon">
+                    <ion-icon name="people"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <div><ul id="tab"></ul></div>
+    </section>
+    
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="js/listFriends.js"></script>
+
+</body>
+</html>
