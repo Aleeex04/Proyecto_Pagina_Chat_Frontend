@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CHAT</title>
-	<link rel="stylesheet" href="css/chat.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>CHAT</title>
 </head>
-<body>
-    <section>
-        <div class="container">
-            <label class="header">
-                Mail del receptor: <input type="text" id="receptor" >
-                <button class="but" type="submit" onclick="goOptions()">Opciones</button>
-            </label>
-            <div class="body">
-                <div><ul id="tab"></ul></div>
+<body onload="rebreMissatge()">
+    <div id="men">
+        <form onsubmit="enviarMissatge(); return false;">
+            <div class="header">
+                <span>Mail de receptor:</span>
+                <input type="text" id="receptor" placeholder="Receptor" required>
+                <button class="but" id= "btn-opt" onclick="goOptions()">Opciones</button>
             </div>
-            <div class="footer">
-                <form>
-                    <input type="text" id="sms" placeholder="Envia un mensaje">
-                    <button type="submit" onclick="sendSms()">Enviar</button>
-                </form>
-            </div>
-            
-        </div>
-    </section>
-    <script src="js/chat.js"></script>
 
+            <div id="chat-container">
+                <div id="missatges"></div>
+            </div>
+
+            <div class="footer">
+                <input type="text" id="sms" placeholder="Envia un mensaje" required onkeypress="handleKeyPress(event)">
+                <button type="submit" id="btn-sms">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    
+    <script src="js/chat.js"></script>
 </body>
 </html>

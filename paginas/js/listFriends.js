@@ -17,19 +17,20 @@ function listFriends() {
             let listFriends = JSON.parse(http.response);
             tab.innerHTML = "";
 
-            const keys = Object.keys(listFriends);
-            for (let x = 0; x < listFriends.length; x++) {
+            for (let friend of listFriends) {
                 const option = document.createElement("li");
-                option.textContent = JSON.stringify(listFriends[keys[x]]);
+                option.textContent = friend; // Accede directamente al valor del amigo
+                option.style.listStyleType = "none"; // Agrega esta línea para eliminar el punto
                 tab.appendChild(option);
             }
 
-            // Show the friend list
+            // Mostrar la lista de amigos
             tab.style.display = "block";
         }
     }
     http.send();
 }
+
 
 function goOptions() {
     window.location.href = "options.html";

@@ -10,13 +10,13 @@ section{
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: rgb(34, 31, 31);
+    background: #36393f;
 }
 .form-box{
     position: relative;
     width: 400px;
     height: 450px;
-    background:rgb(47, 41, 41);
+    background: transparent;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;

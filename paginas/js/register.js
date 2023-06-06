@@ -13,7 +13,7 @@ function register(){
     http.onload = function(){
         if(this.readyState== 4 && http.status==200){
             if(http.responseText === "true"){
-                alert("Registro completado");
+                alert("Registro completado, inicia sesion");
                 window.location.href = "index.html";
             }else{
                 alert("Registro no competado");
@@ -26,21 +26,20 @@ function codeCountry(){
     var http = new XMLHttpRequest();
     http.open("GET","http://localhost:8080/Proyecto_Chat/Register",true);
 
-    http.onload = function(){
-        if(this.readyState== 4 && http.status==200){
-            
-            let listCountry = JSON.parse(http.response);
-            let selectCountry = document.getElementById("codeCountry");
-            selectCountry.innerHTML= "";
-            
-            const keys = Object.keys(listCountry);
-            for(let x = 0; x < listCountry.length; x++){
-                const option = document.createElement("option");
-                option.value = listCountry[x].code;
-                var strung = JSON.stringify(listCountry[keys[x]]);
-                option.text = strung.substring(21,strung.length-2);
-                selectCountry.appendChild(option);
-            } 
+    http.onreadystatechange=function(){
+        if(this.readyState==4 && this.status==200){
+            console.log(this.responseText);
+            var paisos = JSON.parse(http.response);
+            var select = document.getElementById("codeCountry");
+
+            select.innerHTML = "";
+
+            paisos.forEach(function(pais) {
+                var option = document.createElement("option");
+                option.text = pais.name;
+                option.value= pais.code;
+                select.add(option);
+            });
         }
     }
     http.send();
